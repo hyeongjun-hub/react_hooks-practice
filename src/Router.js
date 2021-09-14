@@ -2,8 +2,9 @@ import React from "react";
 import { HashRouter, Route } from "react-router-dom";
 import Screen from "./Screen";
 import Home from "./Home";
-import Todos from "./Todos";
+import Todos from "./components/Todos";
 import Inputs from "./Inputs";
+import ToDosProvider from "./context2";
 
 const Router = () => {
   return (
@@ -11,7 +12,9 @@ const Router = () => {
       <Route path="/" component={Home} />
       <Route path="/screen" component={Screen} />
       <Route path="/inputs" component={Inputs} />
-      <Route path="/todos" component={Todos} />
+      <ToDosProvider>
+        <Route path="/todos" component={Todos} />
+      </ToDosProvider>
     </HashRouter>
   );
 };

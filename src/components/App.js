@@ -1,7 +1,7 @@
 import React from "react";
-import Lang from "./context";
-import translations from "./translations";
-import Router from "./Router";
+import Lang from "../context";
+import translations from "../translations";
+import Router from "../Router";
 
 function App() {
   return (
